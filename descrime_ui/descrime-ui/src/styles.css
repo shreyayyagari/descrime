@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Yanone+Kaffeesatz&display=swap');
+:root {
+    --brightyellow: #F7B625;
+    --primary: #12394B;
+    --secondary: #fff;
+    --darkpink: #F61A33;
+    --blue: #F0A500;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: box-sizing;
+    font-size: 1.1rem;
+    font-family: 'Nunito', sans-serif;
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+}
