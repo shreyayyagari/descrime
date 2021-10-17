@@ -1,136 +1,136 @@
 .main {
-    background-color:var(--primary);
+  background-color: var(--primary);
 }
 
 .main-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-self: center;
-    width: 80%;
-    margin: 0 auto;
-    height: 91vh;
-    background-color: var(--primary);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 91vh;
+  background-color: var(--primary);
 }
 
 .main-content {
-    text-align: center;
-    justify-self: end;
-    margin-right: 20px;
-    color: var(--secondary);
-    width: 80%;
+  text-align: center;
+  justify-self: end;
+  margin-right: 20px;
+  color: var(--secondary);
+  width: 80%;
 }
 
 .main-content h1 {
-    font-weight: lighter;
-    font-size: 6rem;
-    letter-spacing: 0.02em;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: lighter;
+  font-size: 6rem;
+  letter-spacing: 0.02em;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
 .main-content p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 .main-btn {
-    font-size: 1rem;
-    background-color:var(--darkpink);
-    padding: 10px 35px;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    margin-top: 2rem;
-    position: relative;
-    cursor: pointer;
-    transition: all .35s;
-    outline: none;
+  font-size: 1rem;
+  background-color: var(--darkpink);
+  padding: 10px 35px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  margin-top: 2rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.35s;
+  outline: none;
 }
 
 .main-btn a {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-decoration: none;
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-decoration: none;
 }
 
 .main-btn:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    transition: all .35s;
-    border-radius: 4px;
-    background:var(--blue);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.35s;
+  border-radius: 4px;
+  background: var(--blue);
 }
 
 .main-btn:hover {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .main-btn:hover:after {
-    width:100%;
+  width: 100%;
 }
 
 .main-img-container {
-    text-align: center;
+  text-align: center;
 }
 #main-img {
-    height: 90%;
-    width: 90%;
+  height: 90%;
+  width: 90%;
 }
 
 @media screen and (max-width: 768px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        width: 90%;
-        margin: 0 auto;
-        height: 88.8vh;
-        background-color: var(--primary);
-    }
+  .main-container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 88.8vh;
+    background-color: var(--primary);
+  }
 
-    .main-content {
-        justify-self: center;
-        color: var(--secondary);
-        width: 80%;
-        margin: 0;
-    }
-    .main-content h1 {
-        font-size: 2.3rem;
-    }
+  .main-content {
+    justify-self: center;
+    color: var(--secondary);
+    width: 80%;
+    margin: 0;
+  }
+  .main-content h1 {
+    font-size: 2.3rem;
+  }
 
-    .main-content p {
-        margin-top: 1rem;
-        font-size: 1.3rem;
-    }
-    #main-img {
-        height: 50%;
-        width: 50%;
-    }
+  .main-content p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+  #main-img {
+    height: 50%;
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .main-content {
-        text-align: center;
-    }
-    .main-content h1 {
-        font-size: 2.8rem;
-    }
-    .main-content p {
-        margin-top: 2rem;
-        font-size: 1.5rem;
-    }
+  .main-content {
+    text-align: center;
+  }
+  .main-content h1 {
+    font-size: 2.8rem;
+  }
+  .main-content p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
 
-    .main-btn {
-        padding: 10px 30px;
-        margin-top: 1rem;
-    }
-    #main-img {
-        height: 30%;
-        width: 40%;
-    }
+  .main-btn {
+    padding: 10px 30px;
+    margin-top: 1rem;
+  }
+  #main-img {
+    height: 30%;
+    width: 40%;
+  }
 }
