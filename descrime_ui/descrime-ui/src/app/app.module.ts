@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     HeaderComponent,
     SidebarComponent,
     FooterComponent,
-    HomePageComponent
+    HomePageComponent,
+    AboutUsPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

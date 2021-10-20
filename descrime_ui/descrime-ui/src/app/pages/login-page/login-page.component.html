@@ -1,0 +1,86 @@
+<div class="main-container">
+
+    <div class="container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="front">
+                <img src="../../../assets/images/bg.jpg" alt="">
+                <div class="text">
+                    <span class="text-1">The dead cannot cry out for justice. <br> It is a duty of the living to do so
+                        for them.</span>
+                    <span class="text-2">Let's get connected</span>
+                </div>
+            </div>
+            <div class="back">
+                <img class="backImg" src="../../../assets/images/justice.jpg" alt="">
+                <div class="text">
+                    <span class="text-1">Complete miles of journey <br> with one step</span>
+                    <span class="text-2">Let's get started</span>
+                </div>
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Login</div>
+                    <form action="#">
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <fa-icon [icon]="faEnvelope"></fa-icon>
+                                <input type="text" placeholder="Enter your email" required>
+                            </div>
+                            <div class="input-box">
+                                <fa-icon [icon]="faLock"></fa-icon>
+                                <input type="password" placeholder="Enter your password" required>
+                            </div>
+                            <div class="text"><a href="#">Forgot password?</a></div>
+                            <div class="button input-box">
+                                <input type="submit" value="Sumbit">
+                            </div>
+                            <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-form">
+                    <div class="title">Signup</div>
+                    <form action="#">
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <fa-icon [icon]="faUser"></fa-icon>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+                            <div class="input-box">
+                                <fa-icon [icon]="faEnvelope"></fa-icon>
+                                <input type="text" placeholder="Enter your email" required>
+                            </div>
+                            <div class="input-box">
+                                <fa-icon [icon]="faLock"></fa-icon>
+                                <input type="password" placeholder="Enter your password" required>
+                            </div>
+
+                            <div class="role">
+                                <div class="radio">
+                                    <input id="radio-1" name="radio" type="radio" checked>
+                                    <label for="radio-1" class="radio-label">Admin</label>
+                                </div>
+
+                                <div class="radio">
+                                    <input id="radio-2" name="radio" type="radio">
+                                    <label for="radio-2" class="radio-label">User</label>
+                                </div>
+
+                            </div>
+
+                            <div class="button input-box">
+                                <input type="submit" value="Register">
+                            </div>
+                            <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

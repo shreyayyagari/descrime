@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  faSun = faSun;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }
