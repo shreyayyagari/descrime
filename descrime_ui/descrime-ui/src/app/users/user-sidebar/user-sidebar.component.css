@@ -1,0 +1,99 @@
+.primary-text {
+  color: var(--secondary);
+}
+
+.second-text {
+  color: var(--primary);
+}
+.third-text {
+  color: var(--yellow);
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+#wrapper {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  background-color: var(--primary);
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  font-size: 2.2rem !important;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+.heading-navbar {
+  padding: 1.8%;
+  color: var(--yellow);
+}
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+
+.list-group-item.active {
+  background-color: transparent;
+  color: var(--yellow) !important;
+  font-weight: bold;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+fa-icon {
+  color: var(--secondary);
+}
+.navbar-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border: 1px;
+  background: var(--yellow);
+}
+.navbar-toggler span + span {
+  margin-top: 4px;
+  width: 18px;
+  margin-left: 4px;
+}
+.navbar-toggler span + span + span {
+  width: 10px;
+  margin-left: 10px;
+}
