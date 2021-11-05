@@ -1,0 +1,18 @@
+.heading {
+  padding: 2% 0;
+}
+.heading h2 {
+  color: var(--primary);
+}
+.card {
+  box-shadow: 0px 4px 24px rgba(241, 226, 11, 0.575);
+}
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+  color: black;
+}

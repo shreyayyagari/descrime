@@ -1,0 +1,32 @@
+.heading {
+  padding: 2% 0;
+}
+.heading h2 {
+  color: #cb450b;
+}
+.category {
+  text-align: center;
+  color: #12394b;
+}
+.content {
+  background-color: #e7e2e2;
+  padding: 4%;
+  color: #000;
+  margin-bottom: 1%;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+}
+mat-form-field {
+  padding: 0 10% 0 1%;
+  border-radius: 10px;
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  color: red;
+}

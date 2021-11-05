@@ -9,7 +9,9 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UsersModule } from './users/users.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UsersModule } from './users/users.module';
     UsersModule,
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

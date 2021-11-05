@@ -1,0 +1,13 @@
+.heading {
+  padding: 2% 0;
+}
+.heading h2 {
+  color: var(--primary);
+}
+button {
+  width: 100%;
+  margin: 0 0 20% 0;
+}
+.active {
+  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.575);
+}

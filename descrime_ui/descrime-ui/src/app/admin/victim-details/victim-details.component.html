@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="heading">
+    <h2>Victim’s Detail</h2>
+    <mat-divider></mat-divider>
+  </div>
+  <div>
+    <div class="category">
+      <span>category:</span>
+      <span class="fw-bold">{{ category }}</span>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h3>Name: <span>Lorem ipsum</span></h3>
+        <h3>
+          Address:
+          <span
+            >Tellus aliquam lacus amet donec a egestas auctor lacus quam.</span
+          >
+        </h3>
+        <h3 class="date-time">Time: <span>04-20-16 </span></h3>
+        <h3 class="date-time">Date: <span>16-08-2021</span></h3>
+        <h3>
+          Details:
+          <span
+            >Praesent augue morbi sed porttitor. Vitae, cursus dui arcu, lectus
+            hendrerit in. Bibendum mi integer curabitur eu elementum aenean. Sit
+            consectetur et tellus at. Sem nunc nunc eget libero, amet,
+            pellentesque sodales arcu.</span
+          >
+        </h3>
+      </div>
+    </div>
+    <div class="status">
+      <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>None</mat-option>
+          <mat-option value="resolved">Resolved</mat-option>
+          <mat-option value="under-review">Under Review</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="selected-option">
+        <p>
+          You selected: <span class="fw-bold">{{ selected }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
