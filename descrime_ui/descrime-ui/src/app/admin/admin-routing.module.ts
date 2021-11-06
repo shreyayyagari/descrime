@@ -13,7 +13,32 @@ const routes: Routes = [
     {path: 'register-users', component:RegisteredUsersComponent},
     {path: 'reports', component:ReportsComponent},
     {path: 'details',component:VictimDetailsComponent}
+  ]},
+  {path: 'admin/dashboard',children: [
+    {path: '', component:AdminDashboardComponent},
+    {path: 'register-users', component:RegisteredUsersComponent},
+    {path: 'reports', component:ReportsComponent},
+    {path: 'details',component:VictimDetailsComponent}
+  ]},
+  {path: 'admin/register-users',children: [
+    {path: '', component:RegisteredUsersComponent},
+    {path: 'dashboard', component:AdminDashboardComponent},
+    {path: 'reports', component:ReportsComponent},
+    {path: 'details',component:VictimDetailsComponent}
+  ]},
+  {path: 'admin/reports',children: [
+    {path: '', component:ReportsComponent},
+    {path: 'dashboard', component:AdminDashboardComponent},
+    {path: 'register-users', component:RegisteredUsersComponent},
+    {path: 'details',component:VictimDetailsComponent}
   ]}
+  // {path: 'admin/dashboard/dashboard',children: [
+  //   {path: '', component:ReportsComponent},
+  //   {path: 'dashboard', component:AdminDashboardComponent},
+  //   {path: 'register-users', component:RegisteredUsersComponent},
+  //   {path: 'details',component:VictimDetailsComponent}
+  // ]}
+
   
 
 ];

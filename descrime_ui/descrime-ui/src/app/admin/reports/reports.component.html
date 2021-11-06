@@ -1,81 +1,140 @@
-<div class="container-fluid">
-  <div class="heading">
-    <h2>Reports</h2>
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  Descrime
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+    />
+
+    <h4 class="name">John Smith</h4>
+    <p class="designation">Admin</p>
+
     <mat-divider></mat-divider>
-  </div>
-  <div class="row">
-    <div class="col-xl-3 col-md-6">
-      <button type="button" class="btn btn-success position-relative active">
-        Cases Closed
-        <span
-          class="
-            position-absolute
-            top-0
-            start-100
-            translate-middle
-            badge
-            rounded-pill
-            bg-success
-          "
-        >
-          10+
-        </span>
-      </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>home</mat-icon>
+      <span routerLink="dashboard">Dashboard</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>person</mat-icon>
+      <span routerLink="register-users">Users</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>file_copy</mat-icon>
+      <span routerLink="reports">Reports</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <!-- Main content here! -->
+      <!-- <app-admin-dashboard></app-admin-dashboard> -->
+      <!-- <app-registered-users></app-registered-users> -->
+      <!-- <app-reports></app-reports> -->
+      <!-- <app-victim-details></app-victim-details> -->
+      <!-- <router-outlet></router-outlet> -->
+
+      <div class="container-fluid">
+        <div class="heading">
+          <h2>Reports</h2>
+          <mat-divider></mat-divider>
+        </div>
+        <div class="row">
+          <div class="col-xl-3 col-md-6">
+            <button
+              type="button"
+              class="btn btn-success position-relative active"
+            >
+              Cases Closed
+              <span
+                class="
+                  position-absolute
+                  top-0
+                  start-100
+                  translate-middle
+                  badge
+                  rounded-pill
+                  bg-success
+                "
+              >
+                10+
+              </span>
+            </button>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <button type="button" class="btn btn-danger position-relative">
+              Pending Cases
+              <span
+                class="
+                  position-absolute
+                  top-0
+                  start-100
+                  translate-middle
+                  badge
+                  rounded-pill
+                  bg-danger
+                "
+              >
+                15+
+              </span>
+            </button>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <button type="button" class="btn btn-warning position-relative">
+              Reports Under Review
+              <span
+                class="
+                  position-absolute
+                  top-0
+                  start-100
+                  translate-middle
+                  badge
+                  rounded-pill
+                  bg-warning
+                "
+              >
+                5
+              </span>
+            </button>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <button type="button" class="btn btn-primary position-relative">
+              Cases Registered
+              <span
+                class="
+                  position-absolute
+                  top-0
+                  start-100
+                  translate-middle
+                  badge
+                  rounded-pill
+                  bg-primary
+                "
+              >
+                99+
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <app-all-queries></app-all-queries>
     </div>
-    <div class="col-xl-3 col-md-6">
-      <button type="button" class="btn btn-danger position-relative">
-        Pending Cases
-        <span
-          class="
-            position-absolute
-            top-0
-            start-100
-            translate-middle
-            badge
-            rounded-pill
-            bg-danger
-          "
-        >
-          15+
-        </span>
-      </button>
-    </div>
-    <div class="col-xl-3 col-md-6">
-      <button type="button" class="btn btn-warning position-relative">
-        Reports Under Review
-        <span
-          class="
-            position-absolute
-            top-0
-            start-100
-            translate-middle
-            badge
-            rounded-pill
-            bg-warning
-          "
-        >
-          5
-        </span>
-      </button>
-    </div>
-    <div class="col-xl-3 col-md-6">
-      <button type="button" class="btn btn-primary position-relative">
-        Cases Registered
-        <span
-          class="
-            position-absolute
-            top-0
-            start-100
-            translate-middle
-            badge
-            rounded-pill
-            bg-primary
-          "
-        >
-          99+
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
-<app-all-queries></app-all-queries>
+  </mat-sidenav-content>
+</mat-sidenav-container>

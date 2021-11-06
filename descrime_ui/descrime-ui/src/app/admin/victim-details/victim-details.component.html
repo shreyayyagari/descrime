@@ -1,50 +1,107 @@
-<div class="container-fluid">
-  <div class="heading">
-    <h2>Victim’s Detail</h2>
-    <mat-divider></mat-divider>
-  </div>
-  <div>
-    <div class="category">
-      <span>category:</span>
-      <span class="fw-bold">{{ category }}</span>
-    </div>
-    <div class="container">
-      <div class="content">
-        <h3>Name: <span>Lorem ipsum</span></h3>
-        <h3>
-          Address:
-          <span
-            >Tellus aliquam lacus amet donec a egestas auctor lacus quam.</span
-          >
-        </h3>
-        <h3 class="date-time">Time: <span>04-20-16 </span></h3>
-        <h3 class="date-time">Date: <span>16-08-2021</span></h3>
-        <h3>
-          Details:
-          <span
-            >Praesent augue morbi sed porttitor. Vitae, cursus dui arcu, lectus
-            hendrerit in. Bibendum mi integer curabitur eu elementum aenean. Sit
-            consectetur et tellus at. Sem nunc nunc eget libero, amet,
-            pellentesque sodales arcu.</span
-          >
-        </h3>
-      </div>
-    </div>
-    <div class="status">
-      <mat-form-field appearance="fill">
-        <mat-label>Status</mat-label>
-        <mat-select [(value)]="selected">
-          <mat-option>None</mat-option>
-          <mat-option value="resolved">Resolved</mat-option>
-          <mat-option value="under-review">Under Review</mat-option>
-        </mat-select>
-      </mat-form-field>
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  Descrime
+</mat-toolbar>
 
-      <div class="selected-option">
-        <p>
-          You selected: <span class="fw-bold">{{ selected }}</span>
-        </p>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+    />
+
+    <h4 class="name">John Smith</h4>
+    <p class="designation">Admin</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>home</mat-icon>
+      <span routerLink="dashboard">Dashboard</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>person</mat-icon>
+      <span routerLink="register-users">Users</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>file_copy</mat-icon>
+      <span routerLink="reports">Reports</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <!-- Main content here! -->
+      <!-- <app-admin-dashboard></app-admin-dashboard> -->
+      <!-- <app-registered-users></app-registered-users> -->
+      <!-- <app-reports></app-reports> -->
+      <!-- <app-victim-details></app-victim-details> -->
+
+      <div class="container-fluid">
+        <div class="heading">
+          <h2>Victim’s Detail</h2>
+          <mat-divider></mat-divider>
+        </div>
+        <div>
+          <div class="category">
+            <span>category:</span>
+            <span class="fw-bold">{{ category }}</span>
+          </div>
+          <div class="container">
+            <div class="content">
+              <h3>Name: <span>Lorem ipsum</span></h3>
+              <h3>
+                Address:
+                <span
+                  >Tellus aliquam lacus amet donec a egestas auctor lacus
+                  quam.</span
+                >
+              </h3>
+              <h3 class="date-time">Time: <span>04-20-16 </span></h3>
+              <h3 class="date-time">Date: <span>16-08-2021</span></h3>
+              <h3>
+                Details:
+                <span
+                  >Praesent augue morbi sed porttitor. Vitae, cursus dui arcu,
+                  lectus hendrerit in. Bibendum mi integer curabitur eu
+                  elementum aenean. Sit consectetur et tellus at. Sem nunc nunc
+                  eget libero, amet, pellentesque sodales arcu.</span
+                >
+              </h3>
+            </div>
+          </div>
+          <div class="status">
+            <mat-form-field appearance="fill">
+              <mat-label>Status</mat-label>
+              <mat-select [(value)]="selected">
+                <mat-option>None</mat-option>
+                <mat-option value="resolved">Resolved</mat-option>
+                <mat-option value="under-review">Under Review</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <div class="selected-option">
+              <p>
+                You selected: <span class="fw-bold">{{ selected }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- <router-outlet></router-outlet> -->
     </div>
-  </div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
