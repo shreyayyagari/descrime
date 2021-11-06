@@ -10,8 +10,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -23,12 +23,12 @@ import { AdminModule } from './admin/admin.module';
     LoginPageComponent
   ],
   imports: [
-    UsersModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    AdminModule
+    AdminModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

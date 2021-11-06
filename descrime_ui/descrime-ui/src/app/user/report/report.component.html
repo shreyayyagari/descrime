@@ -1,0 +1,130 @@
+<div id="layoutSidenav">
+  <div id="layoutSidenav_content">
+    <main>
+      <div class="container">
+        <h1 class="mt-4">Enter Details</h1>
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item active"></li>
+        </ol>
+
+        <div class="card mb-4 sub-container">
+          <div class="card-header">
+            <fa-icon [icon]="faTable" class="me-1"></fa-icon>
+            Victim Details
+          </div>
+          <div class="card-body">
+            <form>
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" for="form6Example1"
+                      >First name</label
+                    >
+                    <input
+                      type="text"
+                      id="form6Example1"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" for="form6Example2"
+                      >Last name</label
+                    >
+                    <input
+                      type="text"
+                      id="form6Example2"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" for="form6Example1"
+                      >Address</label
+                    >
+                    <input
+                      type="text"
+                      id="form6Example1"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" for="form6Example2"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="email"
+                      id="form6Example2"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" for="form6Example2">Email</label>
+                    <input
+                      type="email"
+                      id="form6Example2"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Crime Details -->
+              <h4 class="pt-2" style="color: red">Crime Details</h4>
+              <mat-divider class="pb-4"></mat-divider>
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" for="form6Example1">Date</label>
+                    <input
+                      type="date"
+                      id="form6Example1"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <label class="form-label" for="form6Example2">Time</label>
+                    <input
+                      type="time"
+                      id="form6Example2"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="form6Example7"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="form6Example7"
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-danger btn-block mb-4">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`

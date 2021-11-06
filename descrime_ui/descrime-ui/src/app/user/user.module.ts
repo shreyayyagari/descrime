@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AdminRoutingModule } from './admin-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdminComponent } from './admin/admin.component';
+import { UserRoutingModule } from './user-routing.module';
+import { UserComponent } from './user/user.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { ReportComponent } from './report/report.component';
+import { TrackComponent } from './track/track.component';
+import { TncComponent } from './tnc/tnc.component';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,26 +19,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select'
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { AllQueriesComponent } from './all-queries/all-queries.component';
-import { RegisteredUsersComponent } from './registered-users/registered-users.component';
-import { ReportsComponent } from './reports/reports.component';
-import { VictimDetailsComponent } from './victim-details/victim-details.component';
 
 
 @NgModule({
   declarations: [
-    AdminComponent,
-    AdminDashboardComponent,
-    AllQueriesComponent,
-    RegisteredUsersComponent,
-    ReportsComponent,
-    VictimDetailsComponent
+    UserComponent,
+    UserDashboardComponent,
+    ReportComponent,
+    TrackComponent,
+    TncComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule,
-    BrowserAnimationsModule,
+    UserRoutingModule,
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
@@ -48,7 +45,7 @@ import { VictimDetailsComponent } from './victim-details/victim-details.componen
     FontAwesomeModule
   ],
   exports: [
-    AdminComponent
+    UserComponent
   ]
 })
-export class AdminModule { }
+export class UserModule { }
