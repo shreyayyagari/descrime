@@ -19,6 +19,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select'
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { SelfdefenceComponent } from './selfdefence/selfdefence.component';
+import { TabswitchComponent } from './tabswitch/tabswitch.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { SelfdefenceComponent } from './selfdefence/selfdefence.component';
     ReportComponent,
     TrackComponent,
     TncComponent,
-    SelfdefenceComponent
+    SelfdefenceComponent,
+    TabswitchComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +45,8 @@ import { SelfdefenceComponent } from './selfdefence/selfdefence.component';
     MatFormFieldModule,
     MatTableModule,
     MatPaginatorModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatTabsModule
   ]
 })
 export class UserModule { }
