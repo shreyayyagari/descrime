@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { UserRoutingModule } from './user-routing.module';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
@@ -21,6 +22,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 // import { SelfdefenceComponent } from './selfdefence/selfdefence.component';
 import { TabswitchComponent } from './tabswitch/tabswitch.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { SelfDefenceComponent } from './self-defence/self-defence.component';
 
 
 @NgModule({
@@ -30,9 +32,11 @@ import { MatTabsModule } from '@angular/material/tabs';
     TrackComponent,
     TncComponent,
     // SelfdefenceComponent,
-    TabswitchComponent
+    TabswitchComponent,
+    SelfDefenceComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     UserRoutingModule,
     MatToolbarModule,
