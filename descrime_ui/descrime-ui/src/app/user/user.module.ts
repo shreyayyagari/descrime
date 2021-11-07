@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select'
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { SelfdefenceComponent } from './selfdefence/selfdefence.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     UserDashboardComponent,
     ReportComponent,
     TrackComponent,
-    TncComponent
+    TncComponent,
+    SelfdefenceComponent
   ],
   imports: [
     CommonModule,
