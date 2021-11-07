@@ -28,11 +28,31 @@
       <div class="form-content">
         <div class="login-form">
           <div class="title">Login</div>
-          <form action="#">
+          <form #login="ngForm" (submit)="doLogin(login)">
             <div class="input-boxes">
               <div class="input-box">
                 <fa-icon [icon]="faEnvelope"></fa-icon>
-                <input type="text" placeholder="Enter your email" required />
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  required
+                  name="uemail"
+                  ngModel
+                  email
+                  #uemail="ngModel"
+                />
+                <p
+                  class="alert alert-danger"
+                  *ngIf="uemail.errors?.required && uemail.touched"
+                >
+                  Please Enter Your Email
+                </p>
+                <p
+                  class="alert alert-danger"
+                  *ngIf="uemail.errors?.email && uemail.touched"
+                >
+                  Please Enter Correct Email
+                </p>
               </div>
               <div class="input-box">
                 <fa-icon [icon]="faLock"></fa-icon>
@@ -40,11 +60,20 @@
                   type="password"
                   placeholder="Enter your password"
                   required
+                  name="upass"
+                  ngModel
+                  #upass="ngModel"
                 />
+                <p
+                  class="alert alert-danger"
+                  *ngIf="upass.errors?.required && upass.touched"
+                >
+                  Please Enter Your Password
+                </p>
               </div>
               <div class="text"><a href="#">Forgot Password?</a></div>
               <div class="button input-box">
-                <input type="submit" value="Login" />
+                <input type="submit" value="Login" [disabled]="login.invalid" />
               </div>
               <div class="text sign-up-text">
                 Don't have an account? <label for="flip">Sign Up Now!</label>
@@ -54,15 +83,55 @@
         </div>
         <div class="signup-form">
           <div class="title">Sign Up</div>
-          <form action="#">
+          <form #register="ngForm" (submit)="doRegistration(register)">
             <div class="input-boxes">
               <div class="input-box">
                 <fa-icon [icon]="faUser"></fa-icon>
-                <input type="text" placeholder="Enter your name" required />
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                  name="username"
+                  ngModel
+                  #username="ngModel"
+                  minlength="4"
+                />
+                <p
+                  class="alert alert-danger"
+                  *ngIf="username.errors?.required && username.touched"
+                >
+                  Please Enter Name
+                </p>
+                <p
+                  class="alert alert-danger"
+                  *ngIf="username.errors?.minlength && username.touched"
+                >
+                  Please Enter Minimum 4 Characters
+                </p>
               </div>
               <div class="input-box">
                 <fa-icon [icon]="faEnvelope"></fa-icon>
-                <input type="text" placeholder="Enter your email" required />
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  required
+                  name="useremail"
+                  ngModel
+                  #useremail="ngModel"
+                  email
+                />
+                <p
+                  class="alert alert-danger"
+                  *ngIf="useremail.errors?.required && useremail.touched"
+                >
+                  Please Enter Email
+                </p>
+                <p
+                  class="alert alert-danger"
+                  *ngIf="useremail.errors?.email && useremail.touched"
+                >
+                  Please Enter Correct Email
+                </p>
               </div>
               <div class="input-box">
                 <fa-icon [icon]="faLock"></fa-icon>
@@ -70,23 +139,49 @@
                   type="password"
                   placeholder="Enter your password"
                   required
+                  name="userpassword"
+                  ngModel
+                  #userpassword="ngModel"
                 />
+                <p
+                  class="alert alert-danger"
+                  *ngIf="userpassword.errors?.required && userpassword.touched"
+                >
+                  Please Enter Password
+                </p>
               </div>
 
               <div class="role">
                 <div class="radio">
-                  <input id="radio-1" name="radio" type="radio" checked />
+                  <input
+                    id="radio-1"
+                    name="radio"
+                    type="radio"
+                    value="admin"
+                    ngModel
+                  />
                   <label for="radio-1" class="radio-label">Admin</label>
                 </div>
 
                 <div class="radio">
-                  <input id="radio-2" name="radio" type="radio" />
+                  <input
+                    id="radio-2"
+                    name="radio"
+                    type="radio"
+                    value="user"
+                    ngModel
+                    checked
+                  />
                   <label for="radio-2" class="radio-label">User</label>
                 </div>
               </div>
 
               <div class="button input-box">
-                <input type="submit" value="Register" />
+                <input
+                  type="submit"
+                  value="Register"
+                  [disabled]="register.invalid"
+                />
               </div>
               <div class="text sign-up-text">
                 Already have an account? <label for="flip">Login Now</label>
