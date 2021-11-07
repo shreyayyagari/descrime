@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { UserRoutingModule } from './user-routing.module';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
@@ -18,7 +19,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select'
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { SelfdefenceComponent } from './selfdefence/selfdefence.component';
 
 
 @NgModule({
@@ -27,9 +27,9 @@ import { SelfdefenceComponent } from './selfdefence/selfdefence.component';
     ReportComponent,
     TrackComponent,
     TncComponent,
-    SelfdefenceComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     UserRoutingModule,
     MatToolbarModule,

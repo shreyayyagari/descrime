@@ -69,7 +69,7 @@
                   Victim Details
                 </div>
                 <div class="card-body">
-                  <form>
+                  <form #form="ngForm" (submit)="addReport(form)">
                     <!-- 2 column grid layout with text inputs for the first and last names -->
                     <div class="row mb-4">
                       <div class="col">
@@ -80,8 +80,18 @@
                           <input
                             type="text"
                             id="form6Example1"
+                            name="ufname"
+                            ngModel
+                            #ufname="ngModel"
                             class="form-control"
+                            required
                           />
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="ufname.errors?.required && ufname.touched"
+                          >
+                            Enter first name of the victim
+                          </p>
                         </div>
                       </div>
                       <div class="col">
@@ -93,7 +103,17 @@
                             type="text"
                             id="form6Example2"
                             class="form-control"
+                            name="ulname"
+                            ngModel
+                            required
+                            #ulname="ngModel"
                           />
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="ulname.errors?.required && ulname.touched"
+                          >
+                            Enter last name of the victim
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -107,7 +127,19 @@
                             type="text"
                             id="form6Example1"
                             class="form-control"
+                            name="uaddress"
+                            ngModel
+                            required
+                            #uaddress="ngModel"
                           />
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="
+                              uaddress.errors?.required && uaddress.touched
+                            "
+                          >
+                            Enter proper address of the victim
+                          </p>
                         </div>
                       </div>
                       <div class="col">
@@ -119,7 +151,19 @@
                             type="email"
                             id="form6Example2"
                             class="form-control"
+                            name="uphone"
+                            #uphone="ngModel"
+                            ngModel
+                            required
+                            pattern="^(0|[1-9][0-9]*)$"
+                            minlength="10"
                           />
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="uphone.errors?.pattern"
+                          >
+                            Please Enter Numbers Only
+                          </p>
                         </div>
                       </div>
                       <div class="col">
@@ -131,7 +175,18 @@
                             type="email"
                             id="form6Example2"
                             class="form-control"
+                            name="uemail"
+                            ngModel
+                            required
+                            email
+                            #uemail="ngModel"
                           />
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="uemail.errors?.required && uemail.touched"
+                          >
+                            Enter Email
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -149,7 +204,17 @@
                             type="date"
                             id="form6Example1"
                             class="form-control"
+                            name="udate"
+                            ngModel
+                            required
+                            #udate="ngModel"
                           />
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="udate.errors?.required && udate.touched"
+                          >
+                            Provide Date of the crime
+                          </p>
                         </div>
                       </div>
                       <div class="col">
@@ -161,7 +226,17 @@
                             type="time"
                             id="form6Example2"
                             class="form-control"
+                            name="utime"
+                            ngModel
+                            required
+                            #udate="ngModel"
                           />
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="udate.errors?.required && udate.touched"
+                          >
+                            Provide Date of the crime
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -175,11 +250,25 @@
                         class="form-control"
                         id="form6Example7"
                         rows="4"
+                        name="udesc"
+                        ngModel
+                        required
+                        #udesc="ngModel"
                       ></textarea>
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="udesc.errors?.required && udesc.touched"
+                      >
+                        Provide the complete detail of the crime
+                      </p>
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-danger btn-block mb-4">
+                    <button
+                      type="submit"
+                      class="btn btn-danger btn-block mb-4"
+                      [disabled]="form.invalid"
+                    >
                       Submit
                     </button>
                   </form>
