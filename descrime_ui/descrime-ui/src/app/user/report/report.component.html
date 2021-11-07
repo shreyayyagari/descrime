@@ -160,6 +160,18 @@
                           />
                           <p
                             class="alert alert-danger"
+                            *ngIf="uphone.errors?.required && uphone.touched"
+                          >
+                            Provide your contact number
+                          </p>
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="uphone.errors?.minlength && uphone.touched"
+                          >
+                            Provide 10-digits phone number
+                          </p>
+                          <p
+                            class="alert alert-danger"
                             *ngIf="uphone.errors?.pattern"
                           >
                             Please Enter Numbers Only
@@ -229,13 +241,13 @@
                             name="utime"
                             ngModel
                             required
-                            #udate="ngModel"
+                            #utime="ngModel"
                           />
                           <p
                             class="alert alert-danger"
-                            *ngIf="udate.errors?.required && udate.touched"
+                            *ngIf="utime.errors?.required && utime.touched"
                           >
-                            Provide Date of the crime
+                            Provide Time of the crime
                           </p>
                         </div>
                       </div>
