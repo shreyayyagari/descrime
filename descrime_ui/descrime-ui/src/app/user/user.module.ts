@@ -19,6 +19,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select'
 import { MatPaginatorModule } from '@angular/material/paginator';
+<<<<<<< HEAD
+=======
+import { SelfdefenceComponent } from './selfdefence/selfdefence.component';
+import { TabswitchComponent } from './tabswitch/tabswitch.component';
+import { MatTabsModule } from '@angular/material/tabs';
+>>>>>>> c3ab294f8cff7b147918d1515fa62d13ab6cfede
 
 
 @NgModule({
@@ -27,6 +33,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ReportComponent,
     TrackComponent,
     TncComponent,
+<<<<<<< HEAD
+=======
+    SelfdefenceComponent,
+    TabswitchComponent
+>>>>>>> c3ab294f8cff7b147918d1515fa62d13ab6cfede
   ],
   imports: [
     FormsModule,
@@ -42,7 +53,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatFormFieldModule,
     MatTableModule,
     MatPaginatorModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatTabsModule
   ]
 })
 export class UserModule { }
