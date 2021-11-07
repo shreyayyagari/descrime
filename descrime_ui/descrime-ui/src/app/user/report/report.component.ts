@@ -2,7 +2,7 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { delay } from 'rxjs/operators';
-import { faChevronRight,faVirus } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight,faVirus,faShieldAlt } from '@fortawesome/free-solid-svg-icons'
 import { faTable } from '@fortawesome/free-solid-svg-icons';
 import { NgForm } from '@angular/forms';
 
@@ -16,6 +16,7 @@ export class ReportComponent implements OnInit {
 
   faChevronRight = faChevronRight
   faVirus = faVirus
+  faShieldAlt =faShieldAlt
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
