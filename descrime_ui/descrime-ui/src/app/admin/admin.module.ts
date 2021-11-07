@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdminComponent } from './admin/admin.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,7 +23,6 @@ import { VictimDetailsComponent } from './victim-details/victim-details.componen
 
 @NgModule({
   declarations: [
-    AdminComponent,
     AdminDashboardComponent,
     AllQueriesComponent,
     RegisteredUsersComponent,
@@ -46,9 +44,6 @@ import { VictimDetailsComponent } from './victim-details/victim-details.componen
     MatTableModule,
     MatPaginatorModule,
     FontAwesomeModule
-  ],
-  exports: [
-    AdminComponent
   ]
 })
 export class AdminModule { }

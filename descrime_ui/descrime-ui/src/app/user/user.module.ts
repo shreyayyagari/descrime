@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
-import { UserComponent } from './user/user.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { ReportComponent } from './report/report.component';
 import { TrackComponent } from './track/track.component';
@@ -23,7 +22,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
-    UserComponent,
     UserDashboardComponent,
     ReportComponent,
     TrackComponent,
@@ -43,9 +41,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTableModule,
     MatPaginatorModule,
     FontAwesomeModule
-  ],
-  exports: [
-    UserComponent
   ]
 })
 export class UserModule { }

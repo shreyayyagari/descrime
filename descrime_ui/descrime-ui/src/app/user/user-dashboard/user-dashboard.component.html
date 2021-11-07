@@ -24,19 +24,19 @@
 
     <button mat-button class="menu-button">
       <mat-icon>home</mat-icon>
-      <span routerLink="dashboard">Dashboard</span>
+      <span routerLink="/user">Dashboard</span>
     </button>
     <button mat-button class="menu-button">
       <mat-icon>file_copy</mat-icon>
-      <span routerLink="reports">Reports</span>
+      <span routerLink="/user/reports">Reports</span>
     </button>
     <button mat-button class="menu-button">
       <fa-icon [icon]="faChevronRight" class="me-3"></fa-icon>
-      <span routerLink="track">Track</span>
+      <span routerLink="/user/track">Track</span>
     </button>
     <button mat-button class="menu-button">
       <fa-icon [icon]="faVirus" class="me-2"></fa-icon>
-      <span routerLink="terms-and-conditions">TnC</span>
+      <span routerLink="/user/terms-and-conditions">TnC</span>
     </button>
 
     <mat-divider></mat-divider>
@@ -49,10 +49,6 @@
   <mat-sidenav-content>
     <div class="content mat-elevation-z8">
       <!-- Main content here! -->
-      <!-- <app-user-dashboard></app-user-dashboard> -->
-      <!-- <app-report></app-report> -->
-      <!-- <app-tnc></app-tnc> -->
-      <!-- <app-track></app-track> -->
 
       <div class="main">
         <div class="main-container">
@@ -66,11 +62,12 @@
               Report To Us. Believe in Us. We will come for you wherever you
               are. We are here only to keep you safe.
             </p>
-            <button class="main-btn"><a routerLink="report">Report</a></button>
+            <button class="main-btn">
+              <a routerLink="/user/reports">Report</a>
+            </button>
           </div>
         </div>
       </div>
-      <!-- <router-outlet></router-outlet> -->
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
