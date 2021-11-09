@@ -47,7 +47,7 @@
 
     <button mat-button class="menu-button">
       <mat-icon>logout</mat-icon>
-      <span>Logout</span>
+      <span routerLink="/">Logout</span>
     </button>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -279,8 +279,7 @@
                     <button
                       type="submit"
                       class="btn btn-danger btn-block mb-4"
-                      [disabled]="form.invalid"
-                    >
+                      [disabled]="form.invalid">
                       Submit
                     </button>
                   </form>

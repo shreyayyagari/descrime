@@ -24,22 +24,22 @@
 
     <button mat-button class="menu-button">
       <mat-icon>home</mat-icon>
-      <span routerLink="/admin">Dashboard</span>
+      <span routerLinkActive="active" routerLink="/admin">Dashboard</span>
     </button>
     <button mat-button class="menu-button">
       <mat-icon>person</mat-icon>
-      <span routerLink="/admin/register-users">Users</span>
+      <span routerLinkActive="active" routerLink="/admin/register-users">Users</span>
     </button>
     <button mat-button class="menu-button">
       <mat-icon>file_copy</mat-icon>
-      <span routerLink="/admin/reports">Reports</span>
+      <span routerLinkActive="active" routerLink="/admin/reports">Reports</span>
     </button>
 
     <mat-divider></mat-divider>
 
     <button mat-button class="menu-button">
       <mat-icon>logout</mat-icon>
-      <span>Logout</span>
+      <span routerLinkActive="active" routerLink="/">Logout</span>
     </button>
   </mat-sidenav>
   <mat-sidenav-content>

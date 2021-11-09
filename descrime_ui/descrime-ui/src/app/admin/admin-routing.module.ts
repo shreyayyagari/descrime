@@ -4,13 +4,15 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { RegisteredUsersComponent } from './registered-users/registered-users.component';
 import { ReportsComponent } from './reports/reports.component';
 import { VictimDetailsComponent } from './victim-details/victim-details.component';
+import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: 'admin',children: [
     {path: '', component:AdminDashboardComponent},
     {path: 'register-users', component:RegisteredUsersComponent},
     {path: 'reports', component:ReportsComponent},
-    {path: 'details',component:VictimDetailsComponent}
+    {path: 'details',component:VictimDetailsComponent},
+    {path: "**", component: PageNotFoundComponent },
   ]}
   
 ];
