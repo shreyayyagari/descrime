@@ -14,6 +14,7 @@ const routes: Routes = [
     {path: 'reports', component:ReportsComponent},
     {path: 'details',component:VictimDetailsComponent},
     {path: 'feedback',component:UserFeedbackComponent},
+    {path:'victim',component:VictimDetailsComponent},
     {path:'**',component:PageNotFoundComponent}
 
 

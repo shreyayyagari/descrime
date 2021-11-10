@@ -49,11 +49,6 @@
   <mat-sidenav-content>
     <div class="content mat-elevation-z8">
       <!-- Main content here! -->
-      <!-- <app-admin-dashboard></app-admin-dashboard> -->
-      <!-- <app-registered-users></app-registered-users> -->
-      <!-- <app-reports></app-reports> -->
-      <!-- <app-victim-details></app-victim-details> -->
-      <!-- <router-outlet></router-outlet> -->
 
       <div class="container-fluid">
         <div class="heading">
@@ -66,25 +61,33 @@
           <!-- Position Column -->
           <ng-container matColumnDef="position">
             <th mat-header-cell *matHeaderCellDef>No.</th>
-            <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+            <td mat-cell *matCellDef="let element" routerLink="/admin/victim">
+              {{ element.position }}
+            </td>
           </ng-container>
 
           <!-- Name Column -->
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef>Name</th>
-            <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+            <td mat-cell *matCellDef="let element" routerLink="/admin/victim">
+              {{ element.name }}
+            </td>
           </ng-container>
 
           <!-- cases Column -->
           <ng-container matColumnDef="cases">
             <th mat-header-cell *matHeaderCellDef>No. of Cases</th>
-            <td mat-cell *matCellDef="let element">{{ element.cases }}</td>
+            <td mat-cell *matCellDef="let element" routerLink="/admin/victim">
+              {{ element.cases }}
+            </td>
           </ng-container>
 
           <!-- address Column -->
           <ng-container matColumnDef="address">
             <th mat-header-cell *matHeaderCellDef>Address</th>
-            <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+            <td mat-cell *matCellDef="let element" routerLink="/admin/victim">
+              {{ element.address }}
+            </td>
           </ng-container>
 
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

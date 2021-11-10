@@ -49,10 +49,6 @@
   <mat-sidenav-content>
     <div class="content mat-elevation-z8">
       <!-- Main content here! -->
-      <!-- <app-admin-dashboard></app-admin-dashboard> -->
-      <!-- <app-registered-users></app-registered-users> -->
-      <!-- <app-reports></app-reports> -->
-      <!-- <app-victim-details></app-victim-details> -->
 
       <div class="container-fluid">
         <div class="heading">
@@ -85,27 +81,26 @@
                   eget libero, amet, pellentesque sodales arcu.</span
                 >
               </h3>
-            </div>
-          </div>
-          <div class="status">
-            <mat-form-field appearance="fill">
-              <mat-label>Status</mat-label>
-              <mat-select [(value)]="selected">
-                <mat-option>None</mat-option>
-                <mat-option value="resolved">Resolved</mat-option>
-                <mat-option value="under-review">Under Review</mat-option>
-              </mat-select>
-            </mat-form-field>
+              <div class="status">
+                <mat-form-field appearance="fill">
+                  <mat-label>Status</mat-label>
+                  <mat-select [(value)]="selected">
+                    <mat-option>None</mat-option>
+                    <mat-option value="resolved">Resolved</mat-option>
+                    <mat-option value="under-review">Under Review</mat-option>
+                  </mat-select>
+                </mat-form-field>
 
-            <div class="selected-option">
-              <p>
-                You selected: <span class="fw-bold">{{ selected }}</span>
-              </p>
+                <div class="selected-option">
+                  <p>
+                    You selected: <span class="fw-bold">{{ selected }}</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- <router-outlet></router-outlet> -->
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
