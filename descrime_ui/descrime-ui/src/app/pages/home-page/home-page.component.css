@@ -12,7 +12,9 @@
   height: 100vh;
   background-color: var(--primary);
 }
-
+.chatbot {
+  padding-top: 40px;
+}
 .main-content {
   text-align: left;
   justify-self: start;
