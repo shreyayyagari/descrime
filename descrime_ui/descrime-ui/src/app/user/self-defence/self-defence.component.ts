@@ -2,7 +2,7 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { delay } from 'rxjs/operators';
-import { faChevronRight,faVirus,faShieldAlt } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight,faVirus,faShieldAlt,faCommentDots } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-self-defence',
@@ -14,6 +14,7 @@ export class SelfDefenceComponent implements OnInit {
   faChevronRight = faChevronRight
   faVirus = faVirus
   faShieldAlt = faShieldAlt
+  faCommentDots = faCommentDots
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;

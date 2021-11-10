@@ -23,6 +23,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { TabswitchComponent } from './tabswitch/tabswitch.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SelfDefenceComponent } from './self-defence/self-defence.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SelfDefenceComponent } from './self-defence/self-defence.component';
     TncComponent,
     // SelfdefenceComponent,
     TabswitchComponent,
-    SelfDefenceComponent
+    SelfDefenceComponent,
+    FeedbackComponent
   ],
   imports: [
     FormsModule,

@@ -2,16 +2,24 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { delay } from 'rxjs/operators';
-import { faAngleRight,faCommentDots } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight,faVirus,faShieldAlt,faCommentDots } from '@fortawesome/free-solid-svg-icons'
+import { faTable } from '@fortawesome/free-solid-svg-icons';
+import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-admin-dashboard',
-  templateUrl: './admin-dashboard.component.html',
-  styleUrls: ['./admin-dashboard.component.css']
+  selector: 'app-feedback',
+  templateUrl: './feedback.component.html',
+  styleUrls: ['./feedback.component.css']
 })
-export class AdminDashboardComponent implements OnInit {
-  faAngleRight = faAngleRight;
-  faCommentDots = faCommentDots
+export class FeedbackComponent implements OnInit {
+
+  faTable =faTable
+
+  faChevronRight = faChevronRight
+  faVirus = faVirus
+  faShieldAlt =faShieldAlt
+  faCommentDots =faCommentDots
+
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
@@ -33,7 +41,11 @@ export class AdminDashboardComponent implements OnInit {
         }
       });
     }
+    addFeedback(form:NgForm) {
+      console.log(form.value)
+      form.reset()
+
+    }
       
 
 }
-

@@ -14,10 +14,10 @@
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
     <img
       class="avatar mat-elevation-z8"
-      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+      src="https://i.pinimg.com/236x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg"
     />
 
-    <h4 class="name">John Smith</h4>
+    <h4 class="name">James Franco</h4>
     <p class="designation">User</p>
 
     <mat-divider></mat-divider>
@@ -42,10 +42,14 @@
       <fa-icon [icon]="faShieldAlt" class="me-2"></fa-icon>
       <span routerLink="/user/safety-measures">Self Defence</span>
     </button>
+    <button mat-button class="menu-button">
+      <fa-icon [icon]="faCommentDots" class="me-2"></fa-icon>
+      <span routerLink="/user/feedback">Feedback</span>
+    </button>
 
     <mat-divider></mat-divider>
 
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" routerLink="/">
       <mat-icon>logout</mat-icon>
       <span>Logout</span>
     </button>

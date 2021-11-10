@@ -19,6 +19,7 @@ import { AllQueriesComponent } from './all-queries/all-queries.component';
 import { RegisteredUsersComponent } from './registered-users/registered-users.component';
 import { ReportsComponent } from './reports/reports.component';
 import { VictimDetailsComponent } from './victim-details/victim-details.component';
+import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { VictimDetailsComponent } from './victim-details/victim-details.componen
     AllQueriesComponent,
     RegisteredUsersComponent,
     ReportsComponent,
-    VictimDetailsComponent
+    VictimDetailsComponent,
+    UserFeedbackComponent
   ],
   imports: [
     CommonModule,

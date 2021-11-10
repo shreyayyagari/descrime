@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { RegisteredUsersComponent } from './registered-users/registered-users.component';
 import { ReportsComponent } from './reports/reports.component';
+import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
 import { VictimDetailsComponent } from './victim-details/victim-details.component';
 
 const routes: Routes = [
@@ -10,7 +11,9 @@ const routes: Routes = [
     {path: '', component:AdminDashboardComponent},
     {path: 'register-users', component:RegisteredUsersComponent},
     {path: 'reports', component:ReportsComponent},
-    {path: 'details',component:VictimDetailsComponent}
+    {path: 'details',component:VictimDetailsComponent},
+    {path: 'feedback',component:UserFeedbackComponent}
+
   ]}
   
 ];

@@ -2,6 +2,7 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { delay } from 'rxjs/operators';
+import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { delay } from 'rxjs/operators';
   styleUrls: ['./victim-details.component.css']
 })
 export class VictimDetailsComponent implements OnInit {
-
+  faCommentDots = faCommentDots
   
  
 

@@ -14,37 +14,29 @@
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
     <img
       class="avatar mat-elevation-z8"
-      src="https://i.pinimg.com/236x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg"
+      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
     />
 
-    <h4 class="name">James Franco</h4>
-    <p class="designation">User</p>
+    <h4 class="name">John Smith</h4>
+    <p class="designation">Admin</p>
 
     <mat-divider></mat-divider>
 
     <button mat-button class="menu-button">
       <mat-icon>home</mat-icon>
-      <span routerLink="/user">Dashboard</span>
+      <span routerLink="/admin">Dashboard</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>person</mat-icon>
+      <span routerLink="/admin/register-users">Users</span>
     </button>
     <button mat-button class="menu-button">
       <mat-icon>file_copy</mat-icon>
-      <span routerLink="/user/reports">Reports</span>
-    </button>
-    <button mat-button class="menu-button">
-      <fa-icon [icon]="faChevronRight" class="me-3"></fa-icon>
-      <span routerLink="/user/track">Track</span>
-    </button>
-    <button mat-button class="menu-button">
-      <fa-icon [icon]="faVirus" class="me-2"></fa-icon>
-      <span routerLink="/user/terms-and-conditions">TnC</span>
-    </button>
-    <button mat-button class="menu-button">
-      <fa-icon [icon]="faShieldAlt" class="me-2"></fa-icon>
-      <span routerLink="/user/safety-measures">Self Defence</span>
+      <span routerLink="/admin/reports">Reports</span>
     </button>
     <button mat-button class="menu-button">
       <fa-icon [icon]="faCommentDots" class="me-2"></fa-icon>
-      <span routerLink="/user/feedback">Feedback</span>
+      <span routerLink="/admin/feedback">Feedback</span>
     </button>
 
     <mat-divider></mat-divider>
@@ -58,14 +50,13 @@
     <div class="content mat-elevation-z8">
       <!-- Main content here! -->
 
-      <div class="container">
-        <div *ngIf="isCase">
-          <p>please wait until further notice.We'll contact you soon.</p>
-        </div>
-        <div *ngIf="!isCase">
-          <p>No New Notification</p>
+      <div class="container-fluid">
+        <div class="heading">
+          <h2>Feedback</h2>
+          <mat-divider></mat-divider>
         </div>
       </div>
+      <div class="feedback">no new feedback</div>
       <!-- <router-outlet></router-outlet> -->
     </div>
   </mat-sidenav-content>

@@ -3,6 +3,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { delay } from 'rxjs/operators';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-reports',
@@ -11,6 +13,7 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 })
 export class ReportsComponent implements OnInit {
   faAngleRight =faAngleRight
+  faCommentDots = faCommentDots
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;

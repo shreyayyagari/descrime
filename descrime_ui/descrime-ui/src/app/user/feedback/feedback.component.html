@@ -1,0 +1,165 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  Descrime
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://i.pinimg.com/236x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg"
+    />
+
+    <h4 class="name">James Franco</h4>
+    <p class="designation">User</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>home</mat-icon>
+      <span routerLink="/user">Dashboard</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>file_copy</mat-icon>
+      <span routerLink="/user/reports">Reports</span>
+    </button>
+    <button mat-button class="menu-button">
+      <fa-icon [icon]="faChevronRight" class="me-3"></fa-icon>
+      <span routerLink="/user/track">Track</span>
+    </button>
+    <button mat-button class="menu-button">
+      <fa-icon [icon]="faVirus" class="me-2"></fa-icon>
+      <span routerLink="/user/terms-and-conditions">TnC</span>
+    </button>
+    <button mat-button class="menu-button">
+      <fa-icon [icon]="faShieldAlt" class="me-2"></fa-icon>
+      <span routerLink="/user/safety-measures">Self Defence</span>
+    </button>
+    <button mat-button class="menu-button">
+      <fa-icon [icon]="faCommentDots" class="me-2"></fa-icon>
+      <span routerLink="/user/feedback">Feedback</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <!-- Main content here! -->
+
+      <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+          <main>
+            <div class="container">
+              <h1 class="mt-4">We appriciate your feedback</h1>
+              <p style="color: red">Please leave us a review</p>
+              <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item active"></li>
+              </ol>
+
+              <div class="card mb-4 sub-container">
+                <div class="card-body">
+                  <form #form="ngForm" (submit)="addFeedback(form)">
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                    <div class="row mb-4">
+                      <div class="col">
+                        <div class="form-outline">
+                          <label class="form-label" for="form6Example1"
+                            >First name</label
+                          >
+                          <input
+                            type="text"
+                            id="form6Example1"
+                            name="ufname"
+                            ngModel
+                            #ufname="ngModel"
+                            class="form-control"
+                            required
+                          />
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="ufname.errors?.required && ufname.touched"
+                          >
+                            Enter your first name
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-outline">
+                          <label class="form-label" for="form6Example2"
+                            >Last name</label
+                          >
+                          <input
+                            type="text"
+                            id="form6Example2"
+                            class="form-control"
+                            name="ulname"
+                            ngModel
+                            required
+                            #ulname="ngModel"
+                          />
+                          <p
+                            class="alert alert-danger"
+                            *ngIf="ulname.errors?.required && ulname.touched"
+                          >
+                            Enter your last name
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Crime Details -->
+
+                    <!-- Message input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example7"
+                        >Message</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="form6Example7"
+                        rows="4"
+                        name="udesc"
+                        ngModel
+                        required
+                        #udesc="ngModel"
+                      ></textarea>
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="udesc.errors?.required && udesc.touched"
+                      >
+                        Please enter your valuable feedback
+                      </p>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button
+                      type="submit"
+                      class="btn btn-danger btn-block mb-4"
+                      [disabled]="form.invalid"
+                    >
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <!-- <router-outlet></router-outlet> -->
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

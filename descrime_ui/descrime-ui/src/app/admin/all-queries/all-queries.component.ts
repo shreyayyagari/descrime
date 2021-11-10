@@ -27,30 +27,30 @@ export class AllQueriesComponent implements OnInit {
 export interface AllCases {
   name: string;
   position: number;
-  date: number;
+  date: string; 
   status: string;
 }
     
 
 const ELEMENT_DATA: AllCases[] = [
-  {position: 1, name: 'Lorem', date: 1.0079, status: 'H'},
-  {position: 2, name: 'ipsum', date: 4.0026, status: 'He'},
-  {position: 3, name: 'dolor', date: 6.941, status: 'Li'},
-  {position: 4, name: 'sit', date: 9.0122, status: 'Be'},
-  {position: 5, name: 'amet', date: 10.811, status: 'B'},
-  {position: 6, name: 'consectetur', date: 12.0107, status: 'C'},
-  {position: 7, name: 'adipiscing', date: 14.0067, status: 'N'},
-  {position: 8, name: 'elit', date: 15.9994, status: 'O'},
-  {position: 9, name: 'Praesent', date: 18.9984, status: 'F'},
-  {position: 10, name: 'tincidunt', date: 20.1797, status: 'Ne'},
-  {position: 11, name: 'odio', date: 22.9897, status: 'Na'},
-  {position: 12, name: 'maximus', date: 24.305, status: 'Mg'},
-  {position: 13, name: 'nisl', date: 26.9815, status: 'Al'},
-  {position: 14, name: 'varius', date: 28.0855, status: 'Si'},
-  {position: 15, name: 'facilisis', date: 30.9738, status: 'P'},
-  {position: 16, name: 'Pellentesque', date: 32.065, status: 'S'},
-  {position: 17, name: 'quis', date: 35.453, status: 'Cl'},
-  {position: 18, name: 'magna', date: 39.948, status: 'Ar'},
-  {position: 19, name: 'fermentum', date: 39.0983, status: 'K'},
-  {position: 20, name: 'massa', date: 40.078, status: 'Ca'},
+  {position: 1, name: 'Hemakuta  Kannan', date: "16-01-2021", status: 'resolved'},
+  {position: 2, name: 'Anala  Goel', date: "04-01-2021", status: 'Pending'},
+  {position: 3, name: 'Vac  Verma', date: "26-01-2021", status: 'Pending'},
+  {position: 4, name: 'Sahan  Boparai', date: "16-04-2021", status: 'Under review'},
+  {position: 5, name: 'Tamanna  Buch', date: "10-01-2021", status: 'Under review'},
+  {position: 6, name: 'Dakini  Dayal', date: "12-03-2021", status: 'Pending'},
+  {position: 7, name: 'Gatha  Ramachandran', date: "30-01-2021", status: 'Under review'},
+  {position: 8, name: 'Usha  Upadhya', date: "15-04-2021", status: 'Under review'},
+  {position: 9, name: 'Durvasas  Dasgupta', date: "18-04-2021", status: 'Under review'},
+  {position: 10, name: 'Gadhi  Rai', date: "20-01-2021", status: 'Pending'},
+  {position: 11, name: 'Mira  Kumar', date: "22-01-2021", status: 'resolved'},
+  {position: 12, name: 'Lanka  Thomas', date: "24-03-2021", status: 'resolved'},
+  {position: 13, name: 'Tulsi  Parikh', date: "26-04-2021", status: 'resolved'},
+  {position: 14, name: 'Jaganmata  Kade', date: "18-05-2021", status: 'resolved'},
+  {position: 15, name: 'Indivar  Dev', date: "30-05-2021", status: 'Pending'},
+  {position: 16, name: 'Kiran  Majumdar', date: "09-06-2021", status: 'Under review'},
+  {position: 17, name: 'Shashida  Borah', date:" 11-01-2021", status: 'resolved'},
+  {position: 18, name: 'Sany  Chawla', date: "16-10-2021", status: 'Under review'},
+  {position: 19, name: 'Savitari  Sing', date: "13-09-2021", status: 'resolved'},
+  {position: 20, name: 'Sunila  Prabhu', date: "6-08-2021", status: 'resolved'},
 ];

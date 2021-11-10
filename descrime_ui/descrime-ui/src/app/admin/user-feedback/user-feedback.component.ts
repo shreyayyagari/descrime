@@ -5,11 +5,12 @@ import { delay } from 'rxjs/operators';
 import { faAngleRight,faCommentDots } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-admin-dashboard',
-  templateUrl: './admin-dashboard.component.html',
-  styleUrls: ['./admin-dashboard.component.css']
+  selector: 'app-user-feedback',
+  templateUrl: './user-feedback.component.html',
+  styleUrls: ['./user-feedback.component.css']
 })
-export class AdminDashboardComponent implements OnInit {
+export class UserFeedbackComponent implements OnInit {
+
   faAngleRight = faAngleRight;
   faCommentDots = faCommentDots
   @ViewChild(MatSidenav)

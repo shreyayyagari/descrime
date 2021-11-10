@@ -34,10 +34,14 @@
       <mat-icon>file_copy</mat-icon>
       <span routerLink="/admin/reports">Reports</span>
     </button>
+    <button mat-button class="menu-button">
+      <fa-icon [icon]="faCommentDots" class="me-2"></fa-icon>
+      <span routerLink="/admin/feedback">Feedback</span>
+    </button>
 
     <mat-divider></mat-divider>
 
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" routerLink="/">
       <mat-icon>logout</mat-icon>
       <span>Logout</span>
     </button>
