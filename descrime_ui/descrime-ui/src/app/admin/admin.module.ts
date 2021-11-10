@@ -29,7 +29,7 @@ import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
     RegisteredUsersComponent,
     ReportsComponent,
     VictimDetailsComponent,
-    UserFeedbackComponent
+    UserFeedbackComponent,
   ],
   imports: [
     CommonModule,

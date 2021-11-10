@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ReportComponent } from './report/report.component';
 import { SelfDefenceComponent } from './self-defence/self-defence.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
     {path: 'track',component:TrackComponent},
     {path: 'terms-and-conditions',component:TncComponent},
     {path: 'safety-measures',component:SelfDefenceComponent},
-    {path: 'feedback',component:FeedbackComponent}
+    {path: 'feedback',component:FeedbackComponent},
+    {path: '**',component:PageNotFoundComponent}
 
     
 

@@ -32,10 +32,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
     ReportComponent,
     TrackComponent,
     TncComponent,
-    // SelfdefenceComponent,
     TabswitchComponent,
     SelfDefenceComponent,
-    FeedbackComponent
+    FeedbackComponent,
   ],
   imports: [
     FormsModule,
