@@ -51,7 +51,7 @@
 
     <button mat-button class="menu-button" routerLink="/">
       <mat-icon>logout</mat-icon>
-      <span>Logout</span>
+      <span routerLink="/">Logout</span>
     </button>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -60,7 +60,8 @@
 
       <div class="container">
         <div *ngIf="isCase">
-          <p>please wait until further notice.We'll contact you soon.</p>
+          <img class="underconstruct" src="../../../assets/images/underconstruction.png">
+          
         </div>
         <div *ngIf="!isCase">
           <p>No New Notification</p>

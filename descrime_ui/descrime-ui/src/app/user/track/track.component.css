@@ -76,3 +76,6 @@ mat-divider {
 .active {
   color: var(-yellow);
 }
+.underconstruct {
+  width: 700px;
+}

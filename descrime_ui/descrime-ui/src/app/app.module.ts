@@ -13,6 +13,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserModule } from './user/user.module';
     FooterComponent,
     HomePageComponent,
     AboutUsPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     FormsModule,

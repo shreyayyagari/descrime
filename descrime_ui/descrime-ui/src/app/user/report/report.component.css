@@ -1,6 +1,8 @@
-form,
-h1 {
+form {
   color: black;
+}
+h1 {
+  color: var(--primary);
 }
 mat-toolbar {
   background: var(--primary);

@@ -1,10 +1,13 @@
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
+    userId: Number,
     name: String,
     emailAddress: String,
-    phoneNo: Number,
-    dob :Number
+    numberofcases: Number,
+
+    
+    
 });
 
 const userModel = mongoose.model('users',userSchema);

@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
 
 const crimereportSchema = mongoose.Schema({
-    nameofwitness: String,
-    crimereport: String,
-    phoneNo: Number,
-    dateofcrime :Number,
-    nameofvictim: String,
-    reportStatus: String
+    firstname: String,
+    lastName: String,
+    address: String,
+    phnumnber: Number,
+    email: String,
+    dateofcrime: Number,
+    timeofcrime: Number,
+    description: String
 
 });
 
